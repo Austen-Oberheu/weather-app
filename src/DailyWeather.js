@@ -34,7 +34,7 @@ class DailyWeather extends Component {
         return (
             <div className="daily-weather">
             <h1>{this.props.hour}</h1>
-                <img src={this.state.WeatherIcon} onMouseEnter={this.HoverIcon} onMouseLeave={setTimeout(this.LeaveIcon, 2000)} alt='Weather icon' className='weather-icon' width='125px'/>
+                <img src={this.state.WeatherIcon} onMouseEnter={this.HoverIcon} onMouseLeave={this.LeaveIcon} alt='Weather icon' className='weather-icon' width='125px'/>
                 <h1>{this.props.temp}</h1>
             </div>
         )

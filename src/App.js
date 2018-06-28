@@ -111,7 +111,7 @@ class App extends Component {
       zipcode: document.getElementById("zipcodeForm").value
     });
     //Runs API call again for new location
-    fetch('http://api.openweathermap.org/data/2.5/forecast?zip=' + this.state.zipcode + '&units=imperial&appid=2ca4abde09053ebc1e7581bc0a14e257')
+    fetch('http://api.openweathermap.org/data/2.5/forecast?zip=' + document.getElementById("zipcodeForm").value + '&units=imperial&appid=2ca4abde09053ebc1e7581bc0a14e257')
     .then(results => {
       return results.json();
     }).then(data => {
@@ -205,7 +205,6 @@ class App extends Component {
 
   WeatherElement() {
     const days = this.state.days;
-    const hours = this.state.hours;
     var hoursTemp = [];
     var selectedDay = 0;
     var ThreeHourInterval = ["0:00 AM", "3:00 AM", "6:00 AM" , "9:00 AM", "12:00 PM", "3:00 PM", "6:00 PM", "9:00 PM", "12:00 AM"];
